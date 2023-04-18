@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Test Home Page</title>
+</head>
+<body>
+    <h1>Welcome to the Career Test Website</h1>
+    <p>Take our career test to find out what career is best for you!</p>
+    <a href="/career-test">Take the Career Test</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Test</title>
+</head>
+<body>
+    <h1>Career Test</h1>
+    <form method="POST" action="{{ url_for('career_test') }}">
+        {{ form.hidden_tag() }}
+        {{ form.question1.label }} {{ form.question1 }}
+        {{ form.question2.label }} {{ form.question2 }}
+        {{ form.question3.label }} {{ form.question3 }}
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
